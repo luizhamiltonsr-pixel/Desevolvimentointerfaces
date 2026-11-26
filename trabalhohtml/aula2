@@ -1,0 +1,83 @@
+let numero = 8; // teste também com 11
+
+if (numero % 2 === 0) {
+  console.log(numero + " é par");
+} else {
+  console.log(numero + " é ímpar");
+}
+
+exercicio2
+
+let valorCompra = 199; // teste também com 200
+let total;
+
+if (valorCompra >= 200) {
+  total = valorCompra * 0.9;
+} else {
+  total = valorCompra;
+}
+
+console.log("Total a pagar: R$ " + total.toFixed(2));
+
+exercicio3
+
+let idade = 20;
+let cadastroAtivo = true;
+
+if (idade >= 18 && cadastroAtivo) {
+  console.log("Acesso permitido");
+} else {
+  console.log("Acesso negado");
+}
+
+// Combinações para testar:
+// idade = 20, cadastroAtivo = true  -> permitido
+// idade = 20, cadastroAtivo = false -> negado
+// idade = 16, cadastroAtivo = true  -> negado
+// idade = 16, cadastroAtivo = false -> negado
+
+exercicio 4
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Saudação</title>
+</head>
+<body>
+  <input type="text" id="nome" placeholder="Digite seu nome">
+  <button id="botao">Saudar</button>
+  <p id="saida"></p>
+
+  <script>
+    const campoNome = document.getElementById("nome");
+    const botao = document.getElementById("botao");
+    const saida = document.getElementById("saida");
+
+    botao.addEventListener("click", function () {
+      const nome = campoNome.value.trim();
+
+      if (nome === "") {
+        saida.textContent = "Por favor, preencha o seu nome.";
+      } else {
+        saida.textContent = "Olá, " + nome + "!";
+      }
+    });
+  </script>
+</body>
+</html>
+
+exercicio 5
+
+let temperatura = 25; // teste com 10, 18, 27, 28, 35
+
+if (temperatura < 18) {
+  console.log("Frio");
+} else if (temperatura < 28) {
+  console.log("Agradável");
+} else {
+  console.log("Quente");
+}
+
+exercicio 6
+
