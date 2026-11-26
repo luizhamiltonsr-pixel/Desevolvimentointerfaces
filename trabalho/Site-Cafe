@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O mundo do café</title>
+  <style>
+    :root {
+      --creme: #f8f1e7;
+      --cafe-escuro: #3b2415;
+      --cafe-medio: #7a4a2b;
+      --caramelo: #c8894a;
+      --branco: #fffdf9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #e8dccb;
+      background-image: url("fundo-cafe.jpg");
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: var(--cafe-escuro);
+      line-height: 1.7;
+    }
+
+    header {
+      position: relative;
+      min-height: 380px;
+      background: url("cafe-hero.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2.5rem 1.5rem;
+      color: var(--creme);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20, 10, 5, 0.1), rgba(20, 10, 5, 0.55));
+    }
+
+    .vidro {
+      position: relative;
+      max-width: 380px;
+      width: 100%;
+      background: rgba(255, 253, 249, 0.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 253, 249, 0.35);
+      border-radius: 18px;
+      padding: 2rem 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+    }
+
+    header p {
+      margin: 0.6rem 0 0;
+      font-style: italic;
+      color: #f3e3cc;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    section {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 14px rgba(59, 36, 21, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--cafe-medio);
+      border-bottom: 2px solid var(--caramelo);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      color: var(--cafe-medio);
+      margin: 1rem 0 0.4rem;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    .destaque {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .destaque img {
+      width: 200px;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .destaque div { flex: 1; min-width: 220px; }
+
+    .colunas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 700px) {
+      .colunas { grid-template-columns: 1fr 1fr; }
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+      .galeria { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .galeria figure { margin: 0; }
+
+    .galeria img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: var(--cafe-medio);
+      margin-top: 0.4rem;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid #e6d8c6;
+      vertical-align: top;
+    }
+
+    th { color: var(--cafe-medio); }
+
+    ul, ol {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    a {
+      color: var(--caramelo);
+      font-weight: bold;
+    }
+
+    a:hover { color: var(--cafe-medio); }
+
+    footer {
+      text-align: center;
+      background: var(--cafe-escuro);
+      color: #e8d2b5;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="vidro">
+      <h1>O mundo do café</h1>
+      <p>Da semente à xícara, em poucas linhas</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="destaque">
+      <img src="cafe-fumegante.jpg" alt="Xícara de café fumegante sobre uma esteira de bambu, com grãos e canela ao lado">
+      <div>
+        <h2>Por que o café é tão popular?</h2>
+        <p>
+          O café é uma das bebidas mais consumidas do planeta. Ele é extraído dos grãos
+          de plantas do gênero <em>Coffea</em>, cultivadas principalmente em regiões tropicais.
+          O Brasil é o maior produtor mundial da bebida.
+        </p>
+        <p>
+          Além do sabor, o café é associado à energia e à convivência. Cafeterias são
+          lugares de encontro, trabalho e conversa, e cada região tem seu jeito de preparar a bebida.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Da planta à xícara</h2>
+      <p>
+        O cafeeiro dá frutos chamados cerejas. Dentro de cada cereja ficam duas sementes,
+        que são os grãos verdes. Depois da colheita, os grãos passam por secagem, torra e moagem.
+        É a torra que dá a cor, o aroma e boa parte do sabor.
+      </p>
+      <ol>
+        <li><strong>Plantio e colheita:</strong> os frutos maduros são colhidos à mão ou com máquinas.</li>
+        <li><strong>Beneficiamento:</strong> a casca e a polpa são removidas e os grãos são secos.</li>
+        <li><strong>Torra:</strong> o grão ganha cor escura e aroma característico.</li>
+        <li><strong>Moagem:</strong> o pó é preparado conforme o método de preparo.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Galeria</h2>
+      <div class="galeria">
+        <figure>
+          <img src="cafe-com-leite.jpg" alt="Copo de vidro com café com leite e espuma, ao lado de biscoitos">
+          <figcaption>Café com leite, servido em copo de vidro.</figcaption>
+        </figure>
+        <figure>
+          <img src="espresso.jpg" alt="Pequena xícara de espresso com crema sobre um pires de vidro">
+          <figcaption>Espresso, com a crema dourada por cima.</figcaption>
+        </figure>
+        <figure>
+          <img src="graos-e-xicara.jpg" alt="Xícara branca de café sobre pires com grãos torrados ao redor">
+          <figcaption>Grãos torrados e uma xícara de café preto.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="colunas">
+      <section>
+        <h2>Formas de preparo</h2>
+        <table>
+          <tr><th>Método</th><th>Características</th></tr>
+          <tr><td>Espresso</td><td>Forte e concentrado, feito sob pressão.</td></tr>
+          <tr><td>Coado</td><td>Mais leve e limpo, feito com filtro de papel ou pano.</td></tr>
+          <tr><td>Prensa francesa</td><td>Encorpado, com o pó em contato com a água por alguns minutos.</td></tr>
+          <tr><td>Cold brew</td><td>Infusão fria por horas, bem suave e pouco ácida.</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Passo a passo do café coado</h2>
+        <ol>
+          <li>Moer os grãos na hora do preparo.</li>
+          <li>Colocar o pó no filtro e molhar com um pouco de água quente, para "desabrochar" o café.</li>
+          <li>Despejar o restante da água aos poucos, em movimentos circulares.</li>
+          <li>Servir logo em seguida, para não perder o aroma.</li>
+        </ol>
+      </section>
+    </div>
+
+    <section>
+      <h2>Tipos de grão</h2>
+      <h3>Arábica</h3>
+      <p>
+        Responde pela maior parte da produção mundial. Tem acidez mais marcada, aroma
+        mais complexo e costuma ser cultivado em altitudes maiores.
+      </p>
+      <h3>Robusta (Conilon)</h3>
+      <p>
+        Mais resistente a pragas e ao calor. Tem mais cafeína, corpo mais forte e sabor
+        mais amargo. É muito usado em blends e no café expresso.
+      </p>
+    </section>
+
+    <section>
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>O café é uma das commodities mais negociadas do mundo.</li>
+        <li>Um grão de café é, na verdade, a semente de uma fruta.</li>
+        <li>O espresso tem menos cafeína por xícara do que um café coado de mesmo tamanho, porque a porção é menor.</li>
+        <li>O termo "espresso" significa "feito na hora", em italiano.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Quer saber mais?</h2>
+      <p>
+        Veja a história e o cultivo do café em um artigo completo:
+        <a href="https://pt.wikipedia.org/wiki/Caf%C3%A9" target="_blank" rel="noopener">Leia o artigo na Wikipédia</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Página feita como atividade de HTML.</p>
+  </footer>
+</body>
+</html>
